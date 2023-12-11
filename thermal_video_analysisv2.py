@@ -37,6 +37,9 @@ if video_cap.isOpened():
 # Frame processing time collection array - Uncomment to calculate processing time
 #processing_time = []
 
+# Counter for frame extraction
+i = 0
+
 # Read video frame by frame
 while True:
     #start_time = time.time() # uncomment to calculate processing time
@@ -80,8 +83,16 @@ while True:
     # Find contours in the thresholded image
     contours, _ = cv2.findContours(img_dilated, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
+    # Initialise list of contour areas
+    contour_areas = []
+
     # Draw bounding boxes around the contours
     for contour in contours:
+        # Registering contour areas to filter by size for coordinate extraction
+        if i%10 == 0:
+            area = cv2.contourArea(contour)
+            contour_areas.append(area)
+
         # Filter contours by number of points - associated with size and complexity
         if len(contour)<30: # tunable parameter
             continue
@@ -100,6 +111,20 @@ while True:
 
     # Show frame with bounding boxes
     cv2.imshow('Hot Spots', frame)
+
+    # Extracting largest contour and its centroid for every 10th frame
+    if i%10 == 0:
+        if contour_areas:
+            largest_contour = max(contour_areas)
+            idx = contour_areas.index(largest_contour)
+            print("Largest contour in this frame =", largest_contour, "\n contour index:", idx)
+
+            x_max, y_max, w_max, h_max = cv2.boundingRect(contours[idx])
+            centroid = calculateCentroid(x_max, y_max, x_max + w_max, y_max + h_max)
+            #print(centroid)
+
+    # Increment frame extraction counter
+    i +=1
 
     # Write frame with bounding boxes to output video - uncomment to save video with detections
     #output.write(frame)
