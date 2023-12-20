@@ -9,7 +9,7 @@ import time
 import numpy as np
 
 # Declaration of tunable parameters as global variables
-global Gaussian_Kernel, Gaussian_thres1, Gaussian_thres2, Erosion_Kernel, Erosion_Iterations, Dilation_Kernel, Dilation_Iterations, contour_complexity, contour_size, frame_step
+global Gaussian_Kernel, Gaussian_thres1, Gaussian_thres2, Erosion_Kernel, Erosion_Iterations, Dilation_Kernel, Dilation_Iterations
 
 # Always set Kernel parameters as tuples/vectors, example: (7,7) and must always be square
 Gaussian_Kernel = (15,15)
@@ -19,6 +19,7 @@ Erosion_Kernel = (11,11)
 Erosion_Iterations = 12
 Dilation_Kernel = (5,5)
 Dilation_Iterations = 12
+
 contour_complexity = 30
 contour_size = 100
 frame_step = 10
