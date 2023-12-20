@@ -139,7 +139,7 @@ while True:
     if len(centroids)>=1:
         if len(centroids)>=3:
             main_contour_points = np.array(centroids)
-            cv2.drawContours(frame, [main_contour_points], -1, (255, 0, 0), 2)
+            cv2.drawContours(frame, [main_contour_points], -1, (255, 0, 255), 4)
             main_contour_centroid = calculateContourCentroid(main_contour_points)
         
         elif len(centroids)==2:
