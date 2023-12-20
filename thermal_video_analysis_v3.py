@@ -115,14 +115,14 @@ while True:
     # Draw bounding boxes around the contours
     for contour in contours:
         # Filter contours by number of points - associated with size and complexity
-        if len(contour)<contour_complexity: # tunable parameter
+        if len(contour) < contour_complexity: # tunable parameter
             continue
 
         # Get area of contour to filter for size
         area = cv2.contourArea(contour)
 
         # Filter contours for area
-        if area<contour_size: # tunable parameter
+        if area < contour_size: # tunable parameter
             continue
 
         # Calculate centroids of each contour
