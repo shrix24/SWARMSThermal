@@ -11,4 +11,4 @@ Steps involved in processing are:
 7) Performing Erosion operation on the image *(with tunable parameters)*
 8) Performing Dilation operation on resultant image *(with tunable parameters)*
 9) Drawing contours on resultant image
-10) Drawing bounding boxes on detected contours *(with two tunable parameters, namely: contour length and contour area)*
+10) Drawing bounding boxes on detected contours *(with two tunable parameters, namely: contour complexity and contour area)*
