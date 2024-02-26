@@ -12,6 +12,7 @@
 
 # "%%%%%" - indicates parts of the code that need to be uncommented to save the results to a video file
 
+# Import modules
 import cv2
 import numpy as np
 import time
@@ -23,14 +24,14 @@ from util import rescaleFrame
 global G_Kernel, E_Kernel, E_Iter, D_Kernel, D_Iter, Cont_Cmplx, Cont_Size, frame_step
 
 # Always set Kernel parameters as tuples/vectors, example: (7,7) and must always be square
-G_Kernel = (7,7)
-E_Kernel = (11,11)
-E_Iter = 12
-D_Kernel = (5,5)
-D_Iter = 12
-Cont_Cmplx = 10
-Cont_Size = 100
-frame_step = 10
+G_Kernel = (7,7) # Size of the Gaussian Blur Kernel
+E_Kernel = (11,11) # Size of the Erosion Kernel
+E_Iter = 12 # Number of Erosion Iterations
+D_Kernel = (5,5) # Size of the Dilation Kernel
+D_Iter = 12 # Number of Dilation Iterations
+Cont_Cmplx = 10 # Filter for displaying contours based on complexity
+Cont_Size = 100 # Filter for displaying contours based on size
+frame_step = 10 # 
 
 # Input path to video
 ffmpeg_cmd = [
