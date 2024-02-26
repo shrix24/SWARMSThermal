@@ -21,7 +21,7 @@ from ImgProcessor import ImageProcessor
 from util import rescaleFrame
 
 # Declaration of tunable parameters as global variables
-global G_Kernel, E_Kernel, E_Iter, D_Kernel, D_Iter, Cont_Cmplx, Cont_Size, frame_step
+global G_Kernel, E_Kernel, E_Iter, D_Kernel, D_Iter, Cont_Cmplx, Cont_Size
 
 # Always set Kernel parameters as tuples/vectors, example: (7,7) and must always be square
 G_Kernel = (7,7) # Size of the Gaussian Blur Kernel
@@ -31,7 +31,6 @@ D_Kernel = (5,5) # Size of the Dilation Kernel
 D_Iter = 12 # Number of Dilation Iterations
 Cont_Cmplx = 10 # Filter for displaying contours based on complexity
 Cont_Size = 100 # Filter for displaying contours based on size
-frame_step = 10 # 
 
 # Input path to video
 ffmpeg_cmd = [
