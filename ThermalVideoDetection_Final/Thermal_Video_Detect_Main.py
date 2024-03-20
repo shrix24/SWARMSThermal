@@ -55,7 +55,6 @@ process = subprocess.Popen(ffmpeg_cmd, stdout=subprocess.PIPE, bufsize=10**6, sh
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # Path for output video
 # output_path = "Fire_Detect_v3.mp4"
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 # Create Video capture object
 # video_cap = cv2.VideoCapture(video_path)
@@ -65,7 +64,6 @@ process = subprocess.Popen(ffmpeg_cmd, stdout=subprocess.PIPE, bufsize=10**6, sh
 #     print("Error opening video")
 #     exit()
 
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # Get video properties 
 # if video_cap.isOpened():
 #     width = int(video_cap.get(cv2.CAP_PROP_FRAME_WIDTH))
