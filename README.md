@@ -1,10 +1,15 @@
 # SWARMSThermal
 The setup for this project is as follows:
 - Python 3.7
-- OpenCV 4.2
+- OpenCV 4.2 (requires opencv-python installation as well - using conda/PyPI)
 - Numpy
 - Subprocess
 - FFMPEG
+
+OpenCV installation guide: https://www.youtube.com/watch?v=trXs2r6xSnI&t=69s
+FFMPEG installation guide:
+
+Numpy and Subprocess can be installed through regular python package managers like conda or PyPI
 
 The final version of the project is organised in the ThermalVideoDetection_Final folder. The file that you need to run is the filename that ends in "main". Ensure that you have the "ImgProcessor" and "util" files in the same folder as the "main" file as they are essential to the functioning of the script. Read through the comments in the scripts as a guide for changing the code should you need to.
 
