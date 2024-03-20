@@ -7,6 +7,7 @@ The setup for this project is as follows:
 - FFMPEG
 
 OpenCV installation guide: https://www.youtube.com/watch?v=trXs2r6xSnI&t=69s
+
 FFMPEG installation guide:
 
 Numpy and Subprocess can be installed through regular python package managers like conda or PyPI
