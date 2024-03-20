@@ -2,7 +2,12 @@
 The setup for this project is as follows:
 - Python 3.7
 - OpenCV 4.2
-- 
+- Numpy
+- Subprocess
+- FFMPEG
+
+The final version of the project is organised in the ThermalVideoDetection_Final folder. The file that you need to run is the filename that ends in "main". Ensure that you have the "ImgProcessor" and "util" files in the same folder as the "main" file as they are essential to the functioning of the script. Read through the comments in the scripts as a guide for changing the code should you need to.
+
 Simple image processing technique for detecting hot spots in "white-hot" thermal imagery and videos. Algorithm delivers real-time processing for videos.
 Steps involved in processing are:
 1) Frame-by-Frame processing for videos
