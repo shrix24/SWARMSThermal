@@ -1,5 +1,8 @@
 # SWARMSThermal
-
+The setup for this project is as follows:
+- Python 3.7
+- OpenCV 4.2
+- 
 Simple image processing technique for detecting hot spots in "white-hot" thermal imagery and videos. Algorithm delivers real-time processing for videos.
 Steps involved in processing are:
 1) Frame-by-Frame processing for videos
